@@ -1,0 +1,244 @@
+.sentiment-results {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sentiment-results h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+  width: 100%;
+}
+
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.sentiment-item {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sentiment-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sentiment-item.positive {
+  background-color: rgba(92, 184, 92, 0.1);
+  border-left: 4px solid #5cb85c;
+}
+
+.sentiment-item.negative {
+  background-color: rgba(217, 83, 79, 0.1);
+  border-left: 4px solid #d9534f;
+}
+
+.sentiment-item.neutral {
+  background-color: rgba(240, 173, 78, 0.1);
+  border-left: 4px solid #f0ad4e;
+}
+
+.location {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+}
+
+.query {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.sentiment-info, .keywords {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  text-align: center;
+  width: 100%;
+}
+
+.label {
+  font-weight: 500;
+  color: #555;
+}
+
+.value {
+  color: #333;
+}
+
+.loading, .error, .no-data {
+  text-align: center;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loading {
+  color: #2196F3;
+}
+
+.error {
+  color: #F44336;
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.no-data {
+  color: #9E9E9E;
+}
+
+/* 태블릿 반응형 스타일 (768px ~ 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sentiment-results h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .result-list {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  
+  .sentiment-item {
+    padding: 14px;
+  }
+  
+  .location {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  
+  .query {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+}
+
+/* 모바일 반응형 스타일 (480px ~ 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .sentiment-results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sentiment-results h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .result-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .sentiment-item {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .location {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .query {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .sentiment-info, .keywords {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  
+  .loading, .error, .no-data {
+    padding: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* 작은 모바일 화면 (480px 이하) */
+@media screen and (max-width: 480px) {
+  .sentiment-results {
+    width: 100%;
+  }
+
+  .sentiment-results h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .result-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .sentiment-item {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .location {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  
+  .query {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  
+  .sentiment-info, .keywords {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .loading, .error, .no-data {
+    padding: 16px;
+    font-size: 0.85rem;
+    text-align: center;
+    width: 100%;
+  }
+}

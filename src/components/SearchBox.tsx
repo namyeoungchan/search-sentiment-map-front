@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAppDispatch } from '../redux/hooks/reduxHooks';
 import { fetchSentimentData } from '../redux/slices/sentimentSlice';
+import './SearchBox.css';
 
 const SearchBox: React.FC = () => {
   const [query, setQuery] = useState('');

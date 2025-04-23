@@ -1,0 +1,203 @@
+.korea-map-container {
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #f8f8f8;
+  z-index: 10;
+}
+
+.leaflet-tooltip {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  white-space: normal;
+  max-width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.leaflet-tooltip strong {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+  display: block;
+  text-align: center;
+}
+
+.legend {
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.legend-item {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.legend-text {
+  text-align: center;
+}
+
+.positive-color {
+  background-color: #5cb85c;
+}
+
+.negative-color {
+  background-color: #d9534f;
+}
+
+.neutral-color {
+  background-color: #f0ad4e;
+}
+
+.no-data-color {
+  background-color: #d6e9c6;
+}
+
+/* 태블릿 반응형 스타일 (768px ~ 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .leaflet-tooltip {
+    padding: 6px 10px;
+    font-size: 13px;
+    max-width: 220px;
+    text-align: center;
+  }
+  
+  .leaflet-tooltip strong {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .legend-item {
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+  
+  .legend-color {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+  
+  .legend-text {
+    text-align: center;
+  }
+}
+
+/* 모바일 반응형 스타일 (480px ~ 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .korea-map-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .leaflet-container {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  
+  .leaflet-tooltip {
+    padding: 5px 8px;
+    font-size: 12px;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .leaflet-tooltip strong {
+    font-size: 13px;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+  
+  .legend-item {
+    margin: 3px 0;
+    font-size: 0.8rem;
+    justify-content: center;
+  }
+  
+  .legend-color {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+  
+  .legend-text {
+    text-align: center;
+  }
+}
+
+/* 작은 모바일 화면 (480px 이하) */
+@media screen and (max-width: 480px) {
+  .korea-map-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .leaflet-container {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  
+  .leaflet-tooltip {
+    padding: 4px 6px;
+    font-size: 11px;
+    max-width: 180px;
+    text-align: center;
+  }
+  
+  .leaflet-tooltip strong {
+    font-size: 12px;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+  
+  .legend-item {
+    margin: 2px 0;
+    font-size: 0.75rem;
+    justify-content: center;
+  }
+  
+  .legend-color {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+  }
+  
+  .legend-text {
+    text-align: center;
+  }
+}

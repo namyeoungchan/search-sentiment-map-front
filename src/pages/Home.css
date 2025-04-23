@@ -1,0 +1,236 @@
+.home-page {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  margin: 0 0 4px 0;
+  color: #333;
+  text-align: center;
+}
+
+.app-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  text-align: center;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.search-section {
+  position: relative;
+  padding: 10px 0;
+  width: 90%;
+  max-width: 500px;
+  margin: 10px auto;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.map-section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  min-height: 300px;
+}
+
+.map-container {
+  height: 100%;
+  width: 95%;
+  margin: auto 0;
+  position: relative;
+}
+
+.map-legend {
+  position: absolute;
+  bottom: 120px;
+  right: 50px;
+  z-index: 1000;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-legend h3 {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #333;
+}
+
+.results-section {
+  position: absolute;
+  bottom: 200px;
+  left: 50px;
+  width: calc(100% - 40px);
+  max-width: 400px;
+  max-height: 700px;
+  overflow-y: auto;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 태블릿 화면 대응 (768px ~ 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-description {
+    font-size: 1rem;
+  }
+
+  .map-legend {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .results-section {
+    bottom: 15px;
+    left: 15px;
+    max-width: 350px;
+    max-height: 250px;
+  }
+}
+
+/* 모바일 화면 대응 (767px 이하) */
+@media (max-width: 767px) {
+  .home-page {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .app-header {
+    position: relative;
+    background-color: white;
+    padding: 12px 5px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .app-description {
+    font-size: 0.85rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-section {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+
+  .map-section {
+    order: 2;
+    height: 50vh;
+    width: 100%;
+  }
+
+  .map-legend {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .map-legend h3 {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .results-section {
+    position: relative;
+    order: 3;
+    margin: 15px auto;
+    bottom: auto;
+    left: auto;
+    width: 90%;
+    max-height: none;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 작은 모바일 화면 (480px 이하) */
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .app-description {
+    font-size: 0.8rem;
+  }
+
+  .search-section {
+    width: 95%;
+  }
+
+  .map-section {
+    height: 40vh;
+  }
+
+  .map-legend {
+    bottom: 5px;
+    right: 5px;
+    padding: 4px;
+    font-size: 0.7rem;
+  }
+
+  .map-legend h3 {
+    font-size: 0.7rem;
+    margin-bottom: 3px;
+  }
+
+  .results-section {
+    width: 95%;
+    padding: 8px;
+  }
+}

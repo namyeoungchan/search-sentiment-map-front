@@ -8,7 +8,7 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) => 
     getDefaultMiddleware().concat(logger),
-  devTools: process.env.NODE_ENV !== 'production',
+  devTools: import.meta.env.MODE !== 'production',
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

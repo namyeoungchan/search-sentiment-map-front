@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAppSelector } from '../redux/hooks/reduxHooks';
+import './SentimentResults.css';
 
 const SentimentResults: React.FC = () => {
   const { data, loading, error } = useAppSelector((state) => state.sentiment);
